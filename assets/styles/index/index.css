@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
+:root {
+  --main-font: "Roboto", sans-serif;
+  --sec-font: "Oswald", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --cl-bg-main: #FAD02C;
+  --cl-bg-sec: #E6C2BF;
+  --cl-accent: #282120;
+  --cl-hover: #2D75FF;
+  --cl-bg-main-2: #FEDE00;
+  --cl-contrast: #0A7029;
+  --cl-bg-sec-2: #C8DF52;
+  --cl-contrast-mint: #DBE8D8;
+  font-family: var(--main-font);
+}
+
+.mybrand {
+  font-weight: 700;
+  font-size: 2em;
+  letter-spacing: -0.3rem;
+  position: relative;
+  color: var(--cl-accent);
+  transition: color 250ms;
+}
+
+.mybrand::before {
+  content: "";
+  width: 60%;
+  height: 1rem;
+  position: absolute;
+  background-color: var(--cl-hover);
+  top: 55%;
+  left: -1%;
+  z-index: -1;
+  transform-origin: bottom left;
+  transition: transform 200ms cubic-bezier(0.91, 0, 0.55, 1.64);
+}
+
+.mybrand:hover {
+  color: var(--cl-contrast-mint);
+}
+.mybrand:hover::before {
+  transform: scale(1.83, 2.5);
+}
+
+.brand-text-div {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.store-name {
+  margin-left: 9vmax;
+  font-family: var(--sec-font);
+  font-size: 5vmax;
+  letter-spacing: 1.5rem;
+  color: rgba(40, 33, 32, 0.3137254902);
+}
+
+.span-store {
+  display: block;
+  margin-left: 22vmax;
+  font-family: var(--sec-font);
+  font-size: 3vmax;
+  line-height: 2rem;
+  color: var(--cl-accent);
+}
+
+.principal-landing-text-and-image-div {
+  height: 100vh;
+}
+
+@media (max-width: 900px) {
+  .principal-landing-text-and-image-div {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 50vh;
+    padding-top: 10vh;
+  }
+  .store-name {
+    margin-left: 0;
+  }
+}
+.mylogo {
+  width: 50%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.landing-one-body {
+  aspect-ratio: 960/540;
+  background-image: url(../../images/background_final2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100dvh;
+  width: 100%;
+}
+
+.landing-two-body {
+  aspect-ratio: 960/540;
+  background-image: url(../../images/background_final_two.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100dvh;
+  width: 100%;
+}
+
+.page-two-content-topleft,
+.page-two-content-midbottom,
+.page-two-content-topright {
+  width: 100%;
+  height: 100dvh;
+  align-items: center;
+}
+
+.products {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  padding-top: 5%;
+  color: whitesmoke;
+  text-shadow: 4px 4px 0px #4b4848, 7px 7px 0px rgba(245, 241, 241, 0.2);
+  font-family: var(--main-font);
+  font-size: 2vmax;
+  font-weight: 700;
+}
+
+.products a {
+  letter-spacing: 1vmax;
+  font-size: 5vmax;
+  display: block;
+  margin-top: -2.3vmax;
+  font-weight: bold;
+  font-style: italic;
+  color: hsla(0deg, 2%, 9%, 0.829);
+  text-shadow: 4px 4px 0px #bdbaba, 7px 7px 0px rgba(27, 27, 27, 0.2);
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.products a::after {
+  content: "";
+  width: 17%;
+  height: 3vmax;
+  position: absolute;
+  background-color: var(--cl-hover);
+  top: 60%;
+  left: 35%;
+  z-index: -1;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 15vmax;
+  height: 15vmax;
+  background-color: hsl(240deg, 13%, 27%);
+  outline: 7.5vmax solid rgba(0, 0, 0, 0.5333333333);
+  outline-offset: -7.5vmax;
+  transform: rotate(320deg);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.4), 0 15px 12px rgba(0, 0, 0, 0.4);
+  transition-duration: 0.5s;
+  transition-property: transform, outline, outline-offset, width;
+  transition-delay: 0.5s, 0.5s, 0.5s, 0s;
+}
+
+.pitch-black {
+  background-color: var(--cl-accent);
+}
+
+.melted-ice {
+  background-color: hsl(180deg, 100%, 97%);
+}
+
+.melted-ice .text-wrapper span {
+  color: var(--cl-accent);
+}
+
+.pitch-black .text-wrapper span {
+  color: #f0ffff;
+}
+
+.wrapper .text-wrapper {
+  height: 100%;
+  margin-left: 60%;
+  padding-top: 20%;
+  transition-delay: 0.3s, 0.3s, 0.3s;
+  transition-duration: 0.4s;
+}
+
+.melted-ice .text-wrapper,
+.pitch-black .text-wrapper {
+  margin-left: 50%;
+}
+
+.text-wrapper a {
+  opacity: 0;
+  font-size: 1.5vmax;
+  text-decoration: none;
+  color: var(--cl-contrast-mint);
+}
+
+.text-wrapper a::after {
+  content: "";
+  width: 50%;
+  height: 1vmax;
+  position: absolute;
+  background-color: var(--cl-hover);
+  top: 45%;
+  left: -2px;
+  z-index: -1;
+  transform-origin: bottom left;
+  transition: transform 200ms cubic-bezier(0.91, 0, 0.55, 1.64);
+}
+
+.wrapper span {
+  color: var(--cl-contrast-mint);
+  font-size: 4vmax;
+  font-family: var(--sec-font);
+  line-height: 4vmax;
+}
+
+.wrapper:hover {
+  transform: rotate(0);
+  outline: 2px solid var(--cl-contrast-mint);
+  outline-offset: -5px;
+  width: 27vmax;
+  transition-timing-function: ease-out, linear, linear, linear;
+  transition-delay: 0.4s, 0.5s, 0.5s, 0.5s;
+}
+.wrapper:hover .text-wrapper {
+  margin-left: 10px;
+  width: 100%;
+  transition: 0.3s;
+  transition-delay: 0s, 0s, 0.4s;
+}
+.wrapper:hover a {
+  visibility: visible !important;
+  opacity: 1;
+  color: var(--cl-contrast-mint);
+  width: 40%;
+  display: inline-block;
+  position: relative;
+  align-self: center;
+  transition: visibility 0s, opacity 0.1s 0.8s, color 0.2s 0s;
+}
+.wrapper:hover a:hover {
+  color: var(--cl-accent);
+  transition: 0.2s 0s color;
+}
+.wrapper:hover a:hover::after {
+  transform: scale(1.78, 2);
+}
+
+.melted-ice:hover {
+  outline: 2px solid var(--cl-accent);
+}
+.melted-ice:hover a {
+  color: var(--cl-accent);
+}
+.melted-ice:hover a:hover {
+  color: var(--cl-contrast-mint);
+}
+
+.pitch-black:hover span {
+  width: 70%;
+}
+
+@media (max-width: 800px) {
+  .container-two {
+    flex-direction: column;
+    height: 33.333%;
+  }
+  .products {
+    font-size: 4vmax;
+  }
+  .products div {
+    font-size: 7vmax;
+  }
+  .wrapper {
+    margin: 0 auto;
+    width: 20vmax;
+    height: 20vmax;
+    outline: 10vmax solid rgba(0, 0, 0, 0.5333333333);
+    outline-offset: -10vmax;
+  }
+  .wrapper .text-wrapper {
+    padding-top: 30%;
+  }
+  .text-wrapper span {
+    font-size: 6vmax;
+  }
+  .wrapper:hover {
+    width: 80%;
+    z-index: 2;
+  }
+  .wrapper:hover .text-wrapper {
+    padding-top: 5vmax;
+  }
+  .wrapper:hover a {
+    font-size: 3vmax;
+    text-decoration: none;
+  }
+  .frost-fluo {
+    margin-top: 30vh;
+  }
+  .products {
+    padding-top: 10%;
+  }
+}
+.landing-three-body {
+  background-image: url(../../images/3background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100dvh;
+  width: 100%;
+}
+
+.last-page-container {
+  height: 100dvh;
+}
+
+.third-page-flex-container {
+  padding-top: 70vh;
+  width: 100%;
+}
+
+.dont-fear {
+  color: #f0ffff;
+  font-family: var(--sec-font);
+  font-weight: 600;
+  font-size: 4vmax;
+  text-shadow: 0.06em 0.06em rgba(255, 255, 255, 0.2);
+}
+
+.change {
+  font-family: var(--main-font);
+  font-size: 3vmax;
+  text-decoration: underline;
+  color: #f0ffff;
+  text-decoration-thickness: 3px;
+  -webkit-animation: skew 5s steps(1) infinite;
+          animation: skew 5s steps(1) infinite;
+}
+
+.change:hover {
+  color: #f0ffff;
+}
+
+.will-change {
+  text-align: right;
+  display: block;
+  font-size: 3vmax;
+}
+
+.nothing {
+  text-shadow: 0.1em -0.05em rgb(27, 27, 27), 0.19em -0.09em rgb(53, 52, 52);
+  cursor: pointer;
+  z-index: 0;
+  text-decoration: none;
+  color: grey;
+}
+
+.nothing:hover {
+  text-decoration: none;
+  color: grey;
+  font-size: 4vmax;
+  text-shadow: 0em 0em rgb(27, 27, 27), 0em 0em rgb(27, 27, 27);
+  transition: 0.9s;
+}
+
+.nothing::after {
+  content: "";
+  width: 60%;
+  height: 1vmax;
+  position: absolute;
+  background-color: #bdbaba;
+  top: 60%;
+  left: 0;
+  z-index: -1;
+}
+
+@-webkit-keyframes skew {
+  0% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  1% {
+    text-shadow: -0.025em 0 #ff00c1, 0.05em 0.05em 0.5em white, 0.04em 0.025em #00fff9;
+    -webkit-clip-path: polygon(0% 72%, 34% 72%, 34% 18%, 78% 18%, 78% 14%, 36% 14%, 36% 23%, 8% 23%, 8% 60%, 10% 60%, 10% 25%, 95% 25%, 95% 9%, 28% 9%, 28% 2%, 36% 2%, 36% 85%, 77% 85%, 77% 13%, 30% 13%, 30% 6%, 82% 6%, 82% 15%, 60% 15%, 60% 16%, 60% 16%, 60% 72%, 13% 72%, 13% 91%, 34% 91%, 34% 8%, 29% 8%, 29% 12%, 18% 12%, 18% 73%, 93% 73%, 93% 41%, 49% 41%, 49% 70%, 81% 70%, 81% 21%, 75% 21%, 75% 64%, 80% 64%, 80% 87%, 88% 87%, 88% 93%, 29% 93%, 29% 69%, 32% 69%, 32% 22%, 39% 22%, 39% 92%, 24% 92%);
+            clip-path: polygon(0% 72%, 34% 72%, 34% 18%, 78% 18%, 78% 14%, 36% 14%, 36% 23%, 8% 23%, 8% 60%, 10% 60%, 10% 25%, 95% 25%, 95% 9%, 28% 9%, 28% 2%, 36% 2%, 36% 85%, 77% 85%, 77% 13%, 30% 13%, 30% 6%, 82% 6%, 82% 15%, 60% 15%, 60% 16%, 60% 16%, 60% 72%, 13% 72%, 13% 91%, 34% 91%, 34% 8%, 29% 8%, 29% 12%, 18% 12%, 18% 73%, 93% 73%, 93% 41%, 49% 41%, 49% 70%, 81% 70%, 81% 21%, 75% 21%, 75% 64%, 80% 64%, 80% 87%, 88% 87%, 88% 93%, 29% 93%, 29% 69%, 32% 69%, 32% 22%, 39% 22%, 39% 92%, 24% 92%);
+  }
+  2% {
+    text-shadow: none;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  41% {
+    text-shadow: -0.25em 0 #ff00c1, 0.05em 0.05em 0.5em white, 0.04em 0.025em #00fff9;
+    -webkit-clip-path: polygon(0% 61%, 91% 61%, 91% 75%, 97% 75%, 97% 71%, 60% 71%, 60% 23%, 7% 23%, 7% 72%, 3% 72%, 3% 73%, 97% 73%, 97% 38%, 6% 38%, 6% 32%, 7% 32%, 7% 56%, 21% 56%, 21% 86%, 92% 86%, 92% 83%, 93% 83%, 93% 87%, 32% 87%, 32% 4%, 38% 4%, 38% 53%, 12% 53%, 12% 49%, 36% 49%, 36% 59%, 58% 59%, 58% 4%, 38% 4%, 38% 73%, 75% 73%, 75% 87%, 68% 87%, 68% 83%, 75% 83%, 75% 18%, 12% 18%, 12% 54%, 45% 54%, 45% 56%, 62% 56%, 62% 64%);
+            clip-path: polygon(0% 61%, 91% 61%, 91% 75%, 97% 75%, 97% 71%, 60% 71%, 60% 23%, 7% 23%, 7% 72%, 3% 72%, 3% 73%, 97% 73%, 97% 38%, 6% 38%, 6% 32%, 7% 32%, 7% 56%, 21% 56%, 21% 86%, 92% 86%, 92% 83%, 93% 83%, 93% 87%, 32% 87%, 32% 4%, 38% 4%, 38% 53%, 12% 53%, 12% 49%, 36% 49%, 36% 59%, 58% 59%, 58% 4%, 38% 4%, 38% 73%, 75% 73%, 75% 87%, 68% 87%, 68% 83%, 75% 83%, 75% 18%, 12% 18%, 12% 54%, 45% 54%, 45% 56%, 62% 56%, 62% 64%);
+  }
+  44% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  70% {
+    text-shadow: none;
+    -webkit-clip-path: polygon(0% 26%, 61% 26%, 61% 51%, 10% 51%, 10% 63%, 19% 63%, 19% 16%, 76% 16%, 76% 4%, 98% 4%, 98% 91%, 44% 91%, 44% 2%, 23% 2%, 23% 56%, 66% 56%, 66% 84%, 30% 84%, 30% 20%, 31% 20%, 31% 28%, 6% 28%, 6% 74%, 63% 74%, 63% 15%, 16% 15%, 16% 40%, 77% 40%, 77% 81%, 81% 81%, 81% 69%, 38% 69%, 38% 49%, 61% 49%, 61% 57%, 90% 57%, 90% 71%, 50% 71%, 50% 73%, 29% 73%, 29% 69%, 87% 69%, 87% 80%, 89% 80%, 89% 70%, 59% 70%, 59% 40%, 86% 40%, 86% 37%, 93% 37%, 93% 33%, 90% 33%, 90% 76%);
+            clip-path: polygon(0% 26%, 61% 26%, 61% 51%, 10% 51%, 10% 63%, 19% 63%, 19% 16%, 76% 16%, 76% 4%, 98% 4%, 98% 91%, 44% 91%, 44% 2%, 23% 2%, 23% 56%, 66% 56%, 66% 84%, 30% 84%, 30% 20%, 31% 20%, 31% 28%, 6% 28%, 6% 74%, 63% 74%, 63% 15%, 16% 15%, 16% 40%, 77% 40%, 77% 81%, 81% 81%, 81% 69%, 38% 69%, 38% 49%, 61% 49%, 61% 57%, 90% 57%, 90% 71%, 50% 71%, 50% 73%, 29% 73%, 29% 69%, 87% 69%, 87% 80%, 89% 80%, 89% 70%, 59% 70%, 59% 40%, 86% 40%, 86% 37%, 93% 37%, 93% 33%, 90% 33%, 90% 76%);
+  }
+  72% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  92% {
+    text-shadow: -0.25em 0 #ff00c1, 0.05em 0.05em 0.5em white, 0.04em -0.085em #00fff9;
+    -webkit-clip-path: polygon(0% 49%, 71% 49%, 71% 85%, 21% 85%, 21% 15%, 10% 15%, 10% 74%, 98% 74%, 98% 45%, 76% 45%, 76% 74%, 69% 74%);
+            clip-path: polygon(0% 49%, 71% 49%, 71% 85%, 21% 85%, 21% 15%, 10% 15%, 10% 74%, 98% 74%, 98% 45%, 76% 45%, 76% 74%, 69% 74%);
+  }
+  95% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes skew {
+  0% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  1% {
+    text-shadow: -0.025em 0 #ff00c1, 0.05em 0.05em 0.5em white, 0.04em 0.025em #00fff9;
+    -webkit-clip-path: polygon(0% 72%, 34% 72%, 34% 18%, 78% 18%, 78% 14%, 36% 14%, 36% 23%, 8% 23%, 8% 60%, 10% 60%, 10% 25%, 95% 25%, 95% 9%, 28% 9%, 28% 2%, 36% 2%, 36% 85%, 77% 85%, 77% 13%, 30% 13%, 30% 6%, 82% 6%, 82% 15%, 60% 15%, 60% 16%, 60% 16%, 60% 72%, 13% 72%, 13% 91%, 34% 91%, 34% 8%, 29% 8%, 29% 12%, 18% 12%, 18% 73%, 93% 73%, 93% 41%, 49% 41%, 49% 70%, 81% 70%, 81% 21%, 75% 21%, 75% 64%, 80% 64%, 80% 87%, 88% 87%, 88% 93%, 29% 93%, 29% 69%, 32% 69%, 32% 22%, 39% 22%, 39% 92%, 24% 92%);
+            clip-path: polygon(0% 72%, 34% 72%, 34% 18%, 78% 18%, 78% 14%, 36% 14%, 36% 23%, 8% 23%, 8% 60%, 10% 60%, 10% 25%, 95% 25%, 95% 9%, 28% 9%, 28% 2%, 36% 2%, 36% 85%, 77% 85%, 77% 13%, 30% 13%, 30% 6%, 82% 6%, 82% 15%, 60% 15%, 60% 16%, 60% 16%, 60% 72%, 13% 72%, 13% 91%, 34% 91%, 34% 8%, 29% 8%, 29% 12%, 18% 12%, 18% 73%, 93% 73%, 93% 41%, 49% 41%, 49% 70%, 81% 70%, 81% 21%, 75% 21%, 75% 64%, 80% 64%, 80% 87%, 88% 87%, 88% 93%, 29% 93%, 29% 69%, 32% 69%, 32% 22%, 39% 22%, 39% 92%, 24% 92%);
+  }
+  2% {
+    text-shadow: none;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  41% {
+    text-shadow: -0.25em 0 #ff00c1, 0.05em 0.05em 0.5em white, 0.04em 0.025em #00fff9;
+    -webkit-clip-path: polygon(0% 61%, 91% 61%, 91% 75%, 97% 75%, 97% 71%, 60% 71%, 60% 23%, 7% 23%, 7% 72%, 3% 72%, 3% 73%, 97% 73%, 97% 38%, 6% 38%, 6% 32%, 7% 32%, 7% 56%, 21% 56%, 21% 86%, 92% 86%, 92% 83%, 93% 83%, 93% 87%, 32% 87%, 32% 4%, 38% 4%, 38% 53%, 12% 53%, 12% 49%, 36% 49%, 36% 59%, 58% 59%, 58% 4%, 38% 4%, 38% 73%, 75% 73%, 75% 87%, 68% 87%, 68% 83%, 75% 83%, 75% 18%, 12% 18%, 12% 54%, 45% 54%, 45% 56%, 62% 56%, 62% 64%);
+            clip-path: polygon(0% 61%, 91% 61%, 91% 75%, 97% 75%, 97% 71%, 60% 71%, 60% 23%, 7% 23%, 7% 72%, 3% 72%, 3% 73%, 97% 73%, 97% 38%, 6% 38%, 6% 32%, 7% 32%, 7% 56%, 21% 56%, 21% 86%, 92% 86%, 92% 83%, 93% 83%, 93% 87%, 32% 87%, 32% 4%, 38% 4%, 38% 53%, 12% 53%, 12% 49%, 36% 49%, 36% 59%, 58% 59%, 58% 4%, 38% 4%, 38% 73%, 75% 73%, 75% 87%, 68% 87%, 68% 83%, 75% 83%, 75% 18%, 12% 18%, 12% 54%, 45% 54%, 45% 56%, 62% 56%, 62% 64%);
+  }
+  44% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  70% {
+    text-shadow: none;
+    -webkit-clip-path: polygon(0% 26%, 61% 26%, 61% 51%, 10% 51%, 10% 63%, 19% 63%, 19% 16%, 76% 16%, 76% 4%, 98% 4%, 98% 91%, 44% 91%, 44% 2%, 23% 2%, 23% 56%, 66% 56%, 66% 84%, 30% 84%, 30% 20%, 31% 20%, 31% 28%, 6% 28%, 6% 74%, 63% 74%, 63% 15%, 16% 15%, 16% 40%, 77% 40%, 77% 81%, 81% 81%, 81% 69%, 38% 69%, 38% 49%, 61% 49%, 61% 57%, 90% 57%, 90% 71%, 50% 71%, 50% 73%, 29% 73%, 29% 69%, 87% 69%, 87% 80%, 89% 80%, 89% 70%, 59% 70%, 59% 40%, 86% 40%, 86% 37%, 93% 37%, 93% 33%, 90% 33%, 90% 76%);
+            clip-path: polygon(0% 26%, 61% 26%, 61% 51%, 10% 51%, 10% 63%, 19% 63%, 19% 16%, 76% 16%, 76% 4%, 98% 4%, 98% 91%, 44% 91%, 44% 2%, 23% 2%, 23% 56%, 66% 56%, 66% 84%, 30% 84%, 30% 20%, 31% 20%, 31% 28%, 6% 28%, 6% 74%, 63% 74%, 63% 15%, 16% 15%, 16% 40%, 77% 40%, 77% 81%, 81% 81%, 81% 69%, 38% 69%, 38% 49%, 61% 49%, 61% 57%, 90% 57%, 90% 71%, 50% 71%, 50% 73%, 29% 73%, 29% 69%, 87% 69%, 87% 80%, 89% 80%, 89% 70%, 59% 70%, 59% 40%, 86% 40%, 86% 37%, 93% 37%, 93% 33%, 90% 33%, 90% 76%);
+  }
+  72% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  92% {
+    text-shadow: -0.25em 0 #ff00c1, 0.05em 0.05em 0.5em white, 0.04em -0.085em #00fff9;
+    -webkit-clip-path: polygon(0% 49%, 71% 49%, 71% 85%, 21% 85%, 21% 15%, 10% 15%, 10% 74%, 98% 74%, 98% 45%, 76% 45%, 76% 74%, 69% 74%);
+            clip-path: polygon(0% 49%, 71% 49%, 71% 85%, 21% 85%, 21% 15%, 10% 15%, 10% 74%, 98% 74%, 98% 45%, 76% 45%, 76% 74%, 69% 74%);
+  }
+  95% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}/*# sourceMappingURL=index.css.map */

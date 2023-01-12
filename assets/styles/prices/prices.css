@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
+:root {
+  --main-font: "Roboto", sans-serif;
+  --sec-font: "Oswald", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../../images/prices/background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: var(--main-font);
+  width: 100%;
+  height: 100vh;
+}
+
+.mybrand {
+  font-weight: 700;
+  font-size: 2em;
+  letter-spacing: -0.3rem;
+  position: relative;
+  color: var(--cl-accent);
+  transition: color 350ms;
+}
+
+.mybrand:hover {
+  color: aliceblue;
+}
+
+.nothing {
+  font-family: var(--sec-font);
+  position: absolute;
+  width: 50%;
+  top: 5%;
+  left: 40%;
+  font-size: 2vmax;
+  font-weight: bold;
+}
+
+.nothing-2 {
+  font-family: var(--sec-font);
+  font-size: 2vmax;
+  font-weight: bold;
+}
+
+.nothing-3 {
+  position: relative;
+}
+
+.nothing-3::after {
+  content: "";
+  width: 40%;
+  height: 0.5rem;
+  position: absolute;
+  background-color: azure;
+  bottom: 20%;
+  left: 0%;
+  z-index: -1;
+  transform-origin: bottom left;
+  transition: transform 200ms cubic-bezier(0.91, 0, 0.55, 1.64);
+}
+
+.nothing-3::before {
+  content: "";
+  width: 80%;
+  height: 0.2rem;
+  position: absolute;
+  background-color: azure;
+  bottom: 50%;
+  transform: rotate(15deg);
+  left: 30%;
+  z-index: 0;
+}
+
+.nothing::before {
+  content: "";
+  width: 8%;
+  height: 0.5rem;
+  position: absolute;
+  background-color: azure;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  transform-origin: bottom left;
+  transition: transform 200ms cubic-bezier(0.91, 0, 0.55, 1.64);
+}
+
+.nothing::after {
+  content: "";
+  width: 12%;
+  height: 0.2rem;
+  position: absolute;
+  background-color: azure;
+  bottom: 35%;
+  transform: rotate(-40deg);
+  left: 5%;
+  z-index: 0;
+}
+
+.mycarousel {
+  margin-top: 15vh;
+}
+
+.carousel {
+  outline: 3px dashed blueviolet;
+  outline-offset: 10px;
+  width: 20vmax;
+  height: 20vmax;
+}
+
+.carousel-item > img {
+  width: 20vmax;
+  height: 20vmax;
+}
+
+.myform {
+  margin-top: 12vh;
+}
+
+.mytable {
+  margin-top: 5vmax;
+}
+
+.dif-color {
+  color: rgb(160, 73, 241);
+}
+
+.dif-color-2 {
+  color: rgb(127, 90, 161);
+}/*# sourceMappingURL=prices.css.map */
